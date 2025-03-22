@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    position: relative;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f0f0f0; /* Couleur de fond des sections */
+}
+
+.section .title-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid black;
+    background-color: #ddd; /* Couleur de fond des titres */
+    padding: 5px 10px;
+}
+
+/* Version bureau */
+@media (min-width: 992px) {
+    .col-1 {
+        width: 31.33%; /* 100% / 3, avec un peu de marge pour l'espacement */
+    }
+}
+
+/* Version tablette */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-1:nth-child(1), .col-1:nth-child(2) {
+        width: 48%;
+    }
+    .col-1:nth-child(3) {
+        width: 98%;
+    }
+}
+
+/* Version mobile */
+@media (max-width: 767px) {
+    .col-1 {
+        width: 98%;
+    }
+}
